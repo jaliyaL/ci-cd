@@ -43,5 +43,5 @@ jobs:
 
       - name: Build and push Docker image
         run: |
-          docker build -t mydockerhubuser/hello-world:latest .
-          docker push mydockerhubuser/hello-world:latest
+          docker build -t ${{ secrets.DOCKER_USERNAME }}/hello-world:latest .
+          docker push ${{ secrets.DOCKER_USERNAME }}/hello-world:latest
